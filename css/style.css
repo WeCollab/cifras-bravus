@@ -1,0 +1,219 @@
+@font-face {
+    font-family: "Raleway-Regular.ttf";
+    src: url('fonts/Raleway-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway-Regular.ttf";
+    overflow-x: hidden;
+}
+
+header {
+    /*
+    color: white;
+    display: inline-flex;*/
+    background-color: black;
+    width: 100%;
+}
+
+#logo {
+    width: 180px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    display: none;
+}
+
+#menu {
+    fill: white;
+    width: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 32px 20px 0 0;
+    float: right;
+    display: block;
+    position: sticky;
+}
+
+#menu:active {
+    transform: scale(0.97);
+}
+
+nav {
+    background-color: black;
+    display: none;
+    width: 100vw;
+    position: absolute;
+}
+
+nav ul:last-child {
+    border-bottom: 1px solid white;
+}
+
+nav li {
+    list-style-type: none;
+    line-height: 3;
+    text-align: center;
+    border-top: 1px solid white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-image: linear-gradient(45deg, #f5317f, #ff7132), url(../imgs/wallpaper1.jpg);
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+main {
+    padding: 10px;
+    background-image: url('../imgs/background-light.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+#corpoCifra {
+    white-space: pre;
+}
+
+#corpoCifra b:not(.notColor) {
+    color: white;
+    background: -webkit-linear-gradient(#f5317f, #ff7132);
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+
+#listaCifras {
+    margin-top: 40px;
+}
+
+#listaCifras ul {
+    width: 100vw;
+}
+
+#listaCifras li {
+    line-height: 2;
+}
+
+#listaCifras a {
+    text-decoration: none;
+    color: black;
+}
+
+#listaCifras a:active {
+    transform: scale(0.97);
+}
+
+#selectType {
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: bold;
+    outline: none;
+}
+
+#selectTom {
+    margin-top: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    outline: none;
+}
+
+#typeList {
+    width: 115px;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    display: none;
+    text-align: center;
+    font-weight: bold;
+    margin: -20px 0 0;
+    line-height: 2;
+}
+
+#typeList li {
+    list-style-type: none;
+}
+
+#toneList {
+    position: absolute;
+    display: none;
+    background: white;
+    width: 70px;
+    line-height: 1.5;
+    border: 1px solid black;
+}
+
+#toneList li {
+    list-style-type: none;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
+
+footer {
+    background-color: black;
+    width: 100%;
+    padding: 15px 0 5px;
+}
+
+#logoFooter {
+    width: 80px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+#socialMedia {
+    width: 100%;
+}
+
+#socialMedia ul {
+    margin: 0 auto 15px;
+    width: 6.4em;
+    position: sticky;
+}
+
+#socialMedia li {
+    display: inline-flex;
+    margin: 0 3px;
+}
+
+#socialMedia svg {
+    fill: white;
+    width: 25px;
+    transition: 0.2s;
+}
+#socialMedia svg:active {
+    transform: scale(0.97);
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
