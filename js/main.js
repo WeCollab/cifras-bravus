@@ -12,14 +12,13 @@ let campoHarmonicoBb = ['Bb', 'C', 'D', 'Eb', 'F', 'G', 'A'];
 let campoHarmonicoB = ['B', 'C#', 'D#', 'E', 'F#', 'G#', 'A#'];
 
 $(document).ready(function() {
-    let selectType = document.getElementById('selectType');
     let selectTom = document.getElementById('selectTom');
-    let tonica = document.querySelectorAll('.tonica');
-    let segundo = document.querySelectorAll('.segundo');
-    let quarto = document.querySelectorAll('.quarto');
-    let quinto = document.querySelectorAll('.quinto');
-    let sexto = document.querySelectorAll('.sexto');
-    let setimo = document.querySelectorAll('.setimo');
+    // let tonica = document.querySelectorAll('.tonica');
+    // let segundo = document.querySelectorAll('.segundo');
+    // let quarto = document.querySelectorAll('.quarto');
+    // let quinto = document.querySelectorAll('.quinto');
+    // let sexto = document.querySelectorAll('.sexto');
+    // let setimo = document.querySelectorAll('.setimo');
     $(selectTom).change(function() {
         let value = $(this).val();
         if (value == '1') {
@@ -108,6 +107,21 @@ $(document).ready(function() {
             $('.setimo').text(campoHarmonicoB[6]);
         }
     })
+
+    let selectType = document.getElementById('selectType');
+    $(selectType).change(function() {
+        let value = $(this).val();
+        if (value == '2') {
+            $('.nona').hide(1000);
+            $('.sete').hide(1000);
+            $('.baixo').hide(1000);
+        } else {
+            $('.nona').show(1000);
+            $('.sete').show(1000);
+            $('.baixo').show(1000);
+        }
+    });
+
     
     $('#menu').click(function () {
         if (document.querySelector('nav').style.display == 'block') {
