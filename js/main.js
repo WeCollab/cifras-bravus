@@ -115,11 +115,15 @@ $(document).ready(function() {
             $('.nona').hide(1000);
             $('.sete').hide(1000);
             $('.baixo').hide(1000);
+            $('#corpoCifra').find('.letra').show(1000);
+        } else if (value == '3') {
+            $('#corpoCifra').find('.letra').hide(1000);
         } else {
+            $('#corpoCifra').find('.letra').show(1000);
             $('.nona').show(1000);
             $('.sete').show(1000);
             $('.baixo').show(1000);
-        }
+        } 
     });
 
     
