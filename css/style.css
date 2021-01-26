@@ -132,6 +132,14 @@ main {
     display: inline-flex;
     font-weight: bold;
     outline: none;
+    border: none;
+    border-bottom: 1px solid #00000040;
+    color: black;
+    background: -webkit-linear-gradient(#f5317f, #ff7132);
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
 }
 
 #selectTom {
@@ -140,40 +148,14 @@ main {
     cursor: pointer;
     display: inline-flex;
     outline: none;
-}
-
-#typeList {
-    width: 115px;
-    position: absolute;
-    background-color: white;
-    border: 1px solid black;
-    display: none;
-    text-align: center;
-    font-weight: bold;
-    margin: -20px 0 0;
-    line-height: 2;
-}
-
-#typeList li {
-    list-style-type: none;
-}
-
-#toneList {
-    position: absolute;
-    display: none;
-    background: white;
-    width: 70px;
-    line-height: 1.5;
-    border: 1px solid black;
-}
-
-#toneList li {
-    list-style-type: none;
-    text-align: center;
-    display: block;
-    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid #00000040;
     color: black;
+    background: -webkit-linear-gradient(#f5317f, #ff7132);
     font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
 }
 
 footer {
