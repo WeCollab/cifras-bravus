@@ -120,6 +120,9 @@ $(document).ready(function() {
         } else if (value == '3') {
             $('#corpoCifra').find('.letra').hide(1000);
             $('#corpoCifra').find('.cifra-pro').hide(1000);
+            $('.nona').show(1000);
+            $('.sete').show(1000);
+            $('.baixo').show(1000);
         } else {
             $('#corpoCifra').find('.cifra-pro').show(1000);
             $('#corpoCifra').find('.letra').show(1000);
