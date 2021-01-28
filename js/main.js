@@ -13,12 +13,6 @@ let campoHarmonicoB = ['B', 'C#', 'D#', 'E', 'F#', 'G#', 'A#'];
 
 $(document).ready(function() {
     let selectTom = document.getElementById('selectTom');
-    // let tonica = document.querySelectorAll('.tonica');
-    // let segundo = document.querySelectorAll('.segundo');
-    // let quarto = document.querySelectorAll('.quarto');
-    // let quinto = document.querySelectorAll('.quinto');
-    // let sexto = document.querySelectorAll('.sexto');
-    // let setimo = document.querySelectorAll('.setimo');
     $(selectTom).change(function() {
         let value = $(this).val();
         if (value == '1') {
@@ -112,25 +106,40 @@ $(document).ready(function() {
     $(selectType).change(function() {
         let value = $(this).val();
         if (value == '2') {
+            $('#corpoCifra').find('.letra').show(1000);
+            $('#corpoCifra').find('.cifra-pro').show(1000);
             $('.nona').hide(1000);
             $('.sete').hide(1000);
             $('.baixo').hide(1000);
-            $('#corpoCifra').find('.letra').show(1000);
-            $('#corpoCifra').find('.cifra-pro').show(1000);
+            $('.compasso').hide(1000);
+            $('.estrofe-1').text('1ª Estrofe:');
         } else if (value == '3') {
             $('#corpoCifra').find('.letra').hide(1000);
             $('#corpoCifra').find('.cifra-pro').hide(1000);
             $('.nona').show(1000);
             $('.sete').show(1000);
             $('.baixo').show(1000);
+            $('.compasso').show(1000);
+            $('.estrofe-1').text('Estrofes:');
         } else {
-            $('#corpoCifra').find('.cifra-pro').show(1000);
             $('#corpoCifra').find('.letra').show(1000);
+            $('#corpoCifra').find('.cifra-pro').show(1000);
             $('.nona').show(1000);
             $('.sete').show(1000);
             $('.baixo').show(1000);
+            $('.compasso').hide(1000);
+            $('.estrofe-1').text('1ª Estrofe:');
         } 
     });
+
+    /*let selectOrder = document.getElementById('selectOrder');
+    $(selectOrder).change(function() {
+        let value = $(this).val();
+        if (value == '2') {
+            $('#listaCifras')
+            $('.musica').hide(1000);
+            $('.artista').hide(1000);
+        }*/
 
     
     $('#menu').click(function () {

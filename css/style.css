@@ -106,6 +106,23 @@ main {
     text-decoration: none;
 }
 
+.artista {
+    color: white;
+    background: -webkit-linear-gradient(#f5317f, #ff7132);
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+
+.musica {
+    font-weight: bold;
+}
+
+.compasso {
+    display: none;
+}
+
 #listaCifras {
     margin-top: 40px;
 }
@@ -158,6 +175,22 @@ main {
     text-decoration: none;
 }
 
+#selectOrder {
+    margin-top: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #00000040;
+    color: black;
+    background: -webkit-linear-gradient(#f5317f, #ff7132);
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+
 footer {
     background-color: black;
     width: 100%;
@@ -190,6 +223,7 @@ footer {
     width: 25px;
     transition: 0.2s;
 }
+
 #socialMedia svg:active {
     transform: scale(0.97);
 }
