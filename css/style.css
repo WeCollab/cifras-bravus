@@ -125,14 +125,14 @@ main {
 
 #listaCifras {
     margin-top: 40px;
-}
-
-#listaCifras ul {
-    width: 100vw;
+    display: flex;
+    flex-direction: column;
 }
 
 #listaCifras li {
     line-height: 2;
+    list-style-type: none;
+    display: inline-flex;
 }
 
 #listaCifras a {
@@ -194,7 +194,7 @@ main {
 footer {
     background-color: black;
     width: 100%;
-    padding: 15px 0 5px;
+    padding: 15px 0;
 }
 
 #logoFooter {

@@ -132,14 +132,17 @@ $(document).ready(function() {
         } 
     });
 
-    /*let selectOrder = document.getElementById('selectOrder');
-    $(selectOrder).change(function() {
-        let value = $(this).val();
+    $(document).ready(function() {
+        let order = document.getElementById('selectOrder');
+      $(order).change(function() {
+          let value = $(this).val();
         if (value == '2') {
-            $('#listaCifras')
-            $('.musica').hide(1000);
-            $('.artista').hide(1000);
-        }*/
+            $('li').css({'float': 'right', 'margin': '0 2px'});
+        } else {
+            $('li').css('float', 'left');
+        }
+      })
+    })
 
     
     $('#menu').click(function () {
