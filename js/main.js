@@ -132,8 +132,8 @@ $(document).ready(function() {
         } 
     });
 
-    $(document).ready(function() {
-        let order = document.getElementById('selectOrder');
+    
+      /*let order = document.getElementById('selectOrder');
       $(order).change(function() {
           let value = $(this).val();
         if (value == '2') {
@@ -141,10 +141,16 @@ $(document).ready(function() {
         } else {
             $('li').css('float', 'left');
         }
-      })
-    })
-
+      })*/    
     
+      $(function() {
+          $('#listaCifras').tablesorter();
+      });
+
+      $(function() {
+          $('#listaCifras').tablesorter({ sorter: [[0,0], [1,0]] });
+      })
+
     $('#menu').click(function () {
         if (document.querySelector('nav').style.display == 'block') {
             $(document.querySelector('nav')).hide(1000);
