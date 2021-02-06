@@ -11,9 +11,9 @@ let campoHarmonicoA = ['A', 'B', 'C#', 'D', 'E', 'F#', 'G#'];
 let campoHarmonicoBb = ['Bb', 'C', 'D', 'Eb', 'F', 'G', 'A'];
 let campoHarmonicoB = ['B', 'C#', 'D#', 'E', 'F#', 'G#', 'A#'];
 
-$(document).ready(function() {
+$(document).ready(function () {
     let selectTom = document.getElementById('selectTom');
-    $(selectTom).change(function() {
+    $(selectTom).change(function () {
         let value = $(this).val();
         if (value == '1') {
             $('.tonica').text(campoHarmonicoC[0]);
@@ -103,7 +103,7 @@ $(document).ready(function() {
     })
 
     let selectType = document.getElementById('selectType');
-    $(selectType).change(function() {
+    $(selectType).change(function () {
         let value = $(this).val();
         if (value == '2') {
             $('#corpoCifra').find('.letra').show(1000);
@@ -129,27 +129,19 @@ $(document).ready(function() {
             $('.baixo').show(1000);
             $('.compasso').hide(1000);
             $('.estrofe-1').text('1ª Estrofe:');
-        } 
+        }
     });
 
-    
-      /*let order = document.getElementById('selectOrder');
-      $(order).change(function() {
-          let value = $(this).val();
-        if (value == '2') {
-            $('li').css({'float': 'right', 'margin': '0 2px'});
-        } else {
-            $('li').css('float', 'left');
-        }
-      })*/    
-    
-      $(function() {
-          $('#listaCifras').tablesorter();
-      });
 
-      $(function() {
-          $('#listaCifras').tablesorter({ sorter: [[0,0], [1,0]] });
-      })
+    /*let order = document.getElementById('selectOrder');
+    $(order).change(function() {
+        let value = $(this).val();
+      if (value == '2') {
+          $('li').css({'float': 'right', 'margin': '0 2px'});
+      } else {
+          $('li').css('float', 'left');
+      }
+    })*/
 
     $('#menu').click(function () {
         if (document.querySelector('nav').style.display == 'block') {
@@ -158,10 +150,29 @@ $(document).ready(function() {
             $(document.querySelector('nav')).show(1000);
         }
     })
-    
+
     $('main').click(function () {
         if (document.querySelector('nav').style.display == 'block') {
             $(document.querySelector('nav')).hide(1000);
         }
+    })
+
+    $('.artist-first').tablesorter();
+    let order = document.getElementById('selectOrder');
+    $(order).change(function () {
+        let value = $(this).val();
+        if (value == '2') {
+            $('table td').each(function () {
+                $(this).parent().prepend(this);
+            });
+        } else {
+            $('table td').each(function () {
+                $(this).parent().prepend(this);
+            });
+        }
+
+
+
+
     })
 });

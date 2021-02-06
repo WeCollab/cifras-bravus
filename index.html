@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="./jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/tablesorter/2.17.4/js/jquery.tablesorter.min.js"></script>
     <link rel="icon" href="imgs/icon.png">
     <title>Bravus Music - Cifras</title>
 </head>
@@ -60,131 +61,123 @@
             </select>
         </form>
 
-        <div id="listaCifras" class="artist-first">
-            <table>
-                <tr>
-                    <th>Música</th>
-                    <th>Artista</th>
-                </tr>
-                <tr>
+        <div id="listaCifras">
+            <table class="artist-first">
+                <thead>
+                  <tr>
+                    <td><span>Músicas</span></td>
+                    <td><span>Artistas</span></td>
+                  </tr>
+                </thead>
+                  <tr>
                     <td><span class="musica"><a href="musica-1.html">Pela Fé</a></span></td>
                     <td><span class="artista"><a href="musica-1.html">André Valadão</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
+                  </tr>
+                  <tr>
                     <td><span class="musica"><a href="#">Eu Acredito</a></span></td>
                     <td><span class="artista"><a href="#">Voz da Verdade</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
+                  </tr>
+                  <tr>
                     <td><span class="musica"><a href="#">Asas da Liberdade</a></span></td>
                     <td><span class="artista"><a href="#">Brothers Music</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">Faça Valer</a></span></td>
-                    <td><span class="artista"><a href="#">Rosa de Saron</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">Aonde Está Deus</a></span></td>
-                    <td><span class="artista"><a href="#">Mauro Henrique</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">Tua Mão</a></span></td>
-                    <td><span class="artista"><a href="#">Oficina G3</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">Teus Sonhos</a></span></td>
-                    <td><span class="artista"><a href="#">Fernandinho</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">Quero Agradecer</a></span></td>
-                    <td><span class="artista"><a href="#">André Valadão</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">Por Amor</a></span></td>
-                    <td><span class="artista"><a href="#">Voz da Verdade</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">Hosana</a></span></td>
-                    <td><span class="artista"><a href="#">Mariana Valadão</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">Nada se Compara</a></span></td>
-                    <td><span class="artista"><a href="#">Renascer Praise</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">Meus Próprios Meios</a></span></td>
-                    <td><span class="artista"><a href="#">Oficina G3</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">Sublime</a></span></td>
-                    <td><span class="artista"><a href="#">Leonardo Gonçalves</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">O Escudo</a></span></td>
-                    <td><span class="artista"><a href="#">Voz da Verdade</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">Desperta</a></span></td>
-                    <td><span class="artista"><a href="#">André Valadão</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">Eis-me Aqui</a></span></td>
-                    <td><span class="artista"><a href="#">Renascer Praise</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">Projeto no Deserto</a></span></td>
-                    <td><span class="artista"><a href="#">Voz da Verdade</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">O Hino</a></span></td>
-                    <td><span class="artista"><a href="#">Fernandinho</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td><span class="musica"><a href="#">Santo é o Cordeiro</a></span></td>
-                    <td><span class="artista"><a href="#">Renascer Praise</a></span></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
+                  </tr>
+                  <tr>
                     <td><span class="musica"><a href="#">Rasgue os Céus</a></span></td>
                     <td><span class="artista"><a href="#">Voz da Verdade</a></span></td>
-                </tr>
-            </table>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Faça Valer</a></span></td>
+                    <td><span class="artista"><a href="#">Rosa de Saron</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Aonde Está Deus</a></span></td>
+                    <td><span class="artista"><a href="#">Mauro Henrique</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Eis-me Aqui</a></span></td>
+                    <td><span class="artista"><a href="#">Renascer Praise</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Tua Mão</a></span></td>
+                    <td><span class="artista"><a href="#">Oficina G3</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Teus Sonhos</a></span></td>
+                    <td><span class="artista"><a href="#">Fernandinho</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Quero Agradecer</a></span></td>
+                    <td><span class="artista"><a href="#">André Valadão</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Eu me Rendo</a></span></td>
+                    <td><span class="artista"><a href="#">Renascer Praise</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Por Amor</a></span></td>
+                    <td><span class="artista"><a href="#">Voz da Verdade</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Santo é o Cordeiro</a></span></td>
+                    <td><span class="artista"><a href="#">Renascer Praise</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Acredito</a></span></td>
+                    <td><span class="artista"><a href="#">Leonardo Gonçalves</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Deus da Minha Vida</a></span></td>
+                    <td><span class="artista"><a href="#">Thalles Roberto</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Meus Próprios Meios</a></span></td>
+                    <td><span class="artista"><a href="#">Oficina G3</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">O Escudo</a></span></td>
+                    <td><span class="artista"><a href="#">Voz da Verdade</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Hosana</a></span></td>
+                    <td><span class="artista"><a href="#">Mariana Valadão</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Nome Sobre Todo Nome</a></span></td>
+                    <td><span class="artista"><a href="#">Mais que Vencedores</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Sublime</a></span></td>
+                    <td><span class="artista"><a href="#">Leonardo Gonçalves</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Deus que Surpreende</a></span></td>
+                    <td><span class="artista"><a href="#">Klev Soares</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">O Hino</a></span></td>
+                    <td><span class="artista"><a href="#">Fernandinho</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Triunfal</a></span></td>
+                    <td><span class="artista"><a href="#">Brothers Music</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Eu Escolho Deus</a></span></td>
+                    <td><span class="artista"><a href="#">Thalles Roberto</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Desperta</a></span></td>
+                    <td><span class="artista"><a href="#">André Valadão</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Projeto no Deserto</a></span></td>
+                    <td><span class="artista"><a href="#">Voz da Verdade</a></span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="musica"><a href="#">Nada se Compara</a></span></td>
+                    <td><span class="artista"><a href="#">Renascer Praise</a></span></td>
+                  </tr>
+                </table>
         </div>
     </main>
     <footer>
