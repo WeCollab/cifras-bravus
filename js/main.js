@@ -157,22 +157,30 @@ $(document).ready(function () {
         }
     })
 
-    $('.artist-first').tablesorter();
+    $('[data-component="table-sort"]').tablesorter({
+        headers : {
+          1 : { sortInitialOrder: 'asc' }
+        }
+    });
+
     let order = document.getElementById('selectOrder');
     $(order).change(function () {
         let value = $(this).val();
         if (value == '2') {
-            $('table td').each(function () {
+            $('[data-component="table-sort"] td').each(function () {
+                $(this).parent().prepend(this);
+            });
+            $('[data-component="table-sort"] th').each(function () {
                 $(this).parent().prepend(this);
             });
         } else {
-            $('table td').each(function () {
+            $('[data-component="table-sort"] td').each(function () {
+                $(this).parent().prepend(this);
+            });
+            $('[data-component="table-sort"] th').each(function () {
                 $(this).parent().prepend(this);
             });
         }
-
-
-
-
     })
+    $('[data-component="table-sort"]').find('th:eq(0)').trigger('sort');
 });
