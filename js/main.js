@@ -158,8 +158,10 @@ $(document).ready(function () {
     })
 
     $('[data-component="table-sort"]').tablesorter({
-        headers : {
-          1 : { sortInitialOrder: 'asc' }
+        headers: {
+            1: {
+                sortInitialOrder: 'asc'
+            }
         }
     });
 

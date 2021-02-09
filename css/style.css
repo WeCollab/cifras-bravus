@@ -78,7 +78,8 @@ nav button {
 }
 
 #video {
-    width: 100%;
+    width: 95vw;
+    height: 35vh;
     display: block;
     margin: 0 auto 10px;
 }
@@ -90,7 +91,6 @@ main {
     background-size: cover;
     background-position: center;
 }
-
 
 #corpoCifra {
     white-space: pre;
@@ -114,7 +114,15 @@ main {
     text-decoration: none;
 }
 
-thead span {
+#listaCifras thead {
+    text-align: left;
+}
+
+#listaCifras thead span:not(#music-sort-trigger) {
+    color: black;
+}
+
+#music-sort-trigger {
     color: white;
     background: -webkit-linear-gradient(#f5317f, #ff7132);
     font-weight: bold;
@@ -122,6 +130,10 @@ thead span {
     -webkit-text-fill-color: transparent;
     text-decoration: none;
     line-height: 2;
+}
+
+#listaCifras td:first-child {
+    padding: 0 30px 0 0;
 }
 
 .musica {
