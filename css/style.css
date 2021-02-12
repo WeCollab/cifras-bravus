@@ -171,6 +171,48 @@ main {
     transform: scale(0.97);
 }
 
+#buttons span {
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#menosUm,
+#menosMeio {
+    margin: 5px 9px 0 0;
+}
+
+#maisMeio,
+#maisUm {
+    margin: 5px 0 0 5px;
+}
+
+#maisMeio {
+    margin-right: 15px;
+}
+
+#menosUm,
+#menosMeio,
+#maisMeio,
+#maisUm {
+    border: none;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background: -webkit-linear-gradient(#f5317f, #ff7132);
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+}
+#menosUm:active,
+#menosMeio:active,
+#maisMeio:active,
+#maisUm:active {
+    transform: scale(0.97);
+}
+
 #selectType {
     cursor: pointer;
     display: inline-flex;

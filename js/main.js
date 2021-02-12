@@ -133,15 +133,414 @@ $(document).ready(function () {
     });
 
 
-    /*let order = document.getElementById('selectOrder');
-    $(order).change(function() {
-        let value = $(this).val();
-      if (value == '2') {
-          $('li').css({'float': 'right', 'margin': '0 2px'});
-      } else {
-          $('li').css('float', 'left');
-      }
-    })*/
+  let menosUm = document.getElementById('menosUm');
+  let menosMeio = document.getElementById('menosMeio');
+  let maisMeio = document.getElementById('maisMeio');
+  let maisUm = document.getElementById('maisUm');
+  
+  $(menosUm).click(function() {
+  	let valueTom = $(selectTom).val();
+    if (valueTom == '1') {
+    	$(selectTom).val(11);
+        $('.tonica').text(campoHarmonicoBb[0]);
+        $('.segundo').text(campoHarmonicoBb[1]);
+        $('.quarto').text(campoHarmonicoBb[3]);
+        $('.quinto').text(campoHarmonicoBb[4]);
+        $('.sexto').text(campoHarmonicoBb[5]);
+        $('.setimo').text(campoHarmonicoBb[6]);
+    } else if (valueTom == '2') {
+        $(selectTom).val(12);
+        $('.tonica').text(campoHarmonicoB[0]);
+        $('.segundo').text(campoHarmonicoB[1]);
+        $('.quarto').text(campoHarmonicoB[3]);
+        $('.quinto').text(campoHarmonicoB[4]);
+        $('.sexto').text(campoHarmonicoB[5]);
+        $('.setimo').text(campoHarmonicoB[6]);
+    } else if (valueTom == '3') {
+        $(selectTom).val(1);
+    	$('.tonica').text(campoHarmonicoC[0]);
+        $('.segundo').text(campoHarmonicoC[1]);
+        $('.quarto').text(campoHarmonicoC[3]);
+        $('.quinto').text(campoHarmonicoC[4]);
+        $('.sexto').text(campoHarmonicoC[5]);
+        $('.setimo').text(campoHarmonicoC[6]);
+    } else if (valueTom == '4') {
+    	$(selectTom).val(2);
+    	$('.tonica').text(campoHarmonicoCSust[0]);
+        $('.segundo').text(campoHarmonicoCSust[1]);
+        $('.quarto').text(campoHarmonicoCSust[3]);
+        $('.quinto').text(campoHarmonicoCSust[4]);
+        $('.sexto').text(campoHarmonicoCSust[5]);
+        $('.setimo').text(campoHarmonicoCSust[6]);
+    } else if (valueTom == '5') {
+    	$(selectTom).val(3);
+    	$('.tonica').text(campoHarmonicoD[0]);
+        $('.segundo').text(campoHarmonicoD[1]);
+        $('.quarto').text(campoHarmonicoD[3]);
+        $('.quinto').text(campoHarmonicoD[4]);
+        $('.sexto').text(campoHarmonicoD[5]);
+        $('.setimo').text(campoHarmonicoD[6]);
+    } else if (valueTom == '6') {
+    	$(selectTom).val(4);
+    	$('.tonica').text(campoHarmonicoEb[0]);
+        $('.segundo').text(campoHarmonicoEb[1]);
+        $('.quarto').text(campoHarmonicoEb[3]);
+        $('.quinto').text(campoHarmonicoEb[4]);
+        $('.sexto').text(campoHarmonicoEb[5]);
+        $('.setimo').text(campoHarmonicoEb[6]);
+    } else if (valueTom == '7') {
+        $(selectTom).val(5);
+        $('.tonica').text(campoHarmonicoE[0]);
+        $('.segundo').text(campoHarmonicoE[1]);
+        $('.quarto').text(campoHarmonicoE[3]);
+        $('.quinto').text(campoHarmonicoE[4]);
+        $('.sexto').text(campoHarmonicoE[5]);
+        $('.setimo').text(campoHarmonicoE[6]);
+    } else if (valueTom == '8') {
+    	$(selectTom).val(6);
+    	$('.tonica').text(campoHarmonicoF[0]);
+        $('.segundo').text(campoHarmonicoF[1]);
+        $('.quarto').text(campoHarmonicoF[3]);
+        $('.quinto').text(campoHarmonicoF[4]);
+        $('.sexto').text(campoHarmonicoF[5]);
+        $('.setimo').text(campoHarmonicoF[6]);
+    } else if (valueTom == '9') {
+    	$(selectTom).val(7);
+    	$('.tonica').text(campoHarmonicoFSust[0]);
+        $('.segundo').text(campoHarmonicoFSust[1]);
+        $('.quarto').text(campoHarmonicoFSust[3]);
+        $('.quinto').text(campoHarmonicoFSust[4]);
+        $('.sexto').text(campoHarmonicoFSust[5]);
+        $('.setimo').text(campoHarmonicoFSust[6]);
+    } else if (valueTom == '10') {
+    	$(selectTom).val(8);
+    	$('.tonica').text(campoHarmonicoG[0]);
+        $('.segundo').text(campoHarmonicoG[1]);
+        $('.quarto').text(campoHarmonicoG[3]);
+        $('.quinto').text(campoHarmonicoG[4]);
+        $('.sexto').text(campoHarmonicoG[5]);
+        $('.setimo').text(campoHarmonicoG[6]);
+    } else if (valueTom == '11') {
+    	$(selectTom).val(9);
+    	$('.tonica').text(campoHarmonicoAb[0]);
+        $('.segundo').text(campoHarmonicoAb[1]);
+        $('.quarto').text(campoHarmonicoAb[3]);
+        $('.quinto').text(campoHarmonicoAb[4]);
+        $('.sexto').text(campoHarmonicoAb[5]);
+        $('.setimo').text(campoHarmonicoAb[6]);
+    } else if (valueTom == '12') {
+    	$(selectTom).val(10);
+    	$('.tonica').text(campoHarmonicoA[0]);
+        $('.segundo').text(campoHarmonicoA[1]);
+        $('.quarto').text(campoHarmonicoA[3]);
+        $('.quinto').text(campoHarmonicoA[4]);
+        $('.sexto').text(campoHarmonicoA[5]);
+        $('.setimo').text(campoHarmonicoA[6]);
+    }
+  })
+
+  $(menosMeio).click(function() {
+    let valueTom = $(selectTom).val();
+  if (valueTom == '1') {
+      $(selectTom).val(12);
+      $('.tonica').text(campoHarmonicoB[0]);
+      $('.segundo').text(campoHarmonicoB[1]);
+      $('.quarto').text(campoHarmonicoB[3]);
+      $('.quinto').text(campoHarmonicoB[4]);
+      $('.sexto').text(campoHarmonicoB[5]);
+      $('.setimo').text(campoHarmonicoB[6]);
+  } else if (valueTom == '2') {
+      $(selectTom).val(1);
+      $('.tonica').text(campoHarmonicoC[0]);
+      $('.segundo').text(campoHarmonicoC[1]);
+      $('.quarto').text(campoHarmonicoC[3]);
+      $('.quinto').text(campoHarmonicoC[4]);
+      $('.sexto').text(campoHarmonicoC[5]);
+      $('.setimo').text(campoHarmonicoC[6]);
+  } else if (valueTom == '3') {
+      $(selectTom).val(2);
+      $('.tonica').text(campoHarmonicoCSust[0]);
+      $('.segundo').text(campoHarmonicoCSust[1]);
+      $('.quarto').text(campoHarmonicoCSust[3]);
+      $('.quinto').text(campoHarmonicoCSust[4]);
+      $('.sexto').text(campoHarmonicoCSust[5]);
+      $('.setimo').text(campoHarmonicoCSust[6]);
+  } else if (valueTom == '4') {
+      $(selectTom).val(3);
+      $('.tonica').text(campoHarmonicoD[0]);
+      $('.segundo').text(campoHarmonicoD[1]);
+      $('.quarto').text(campoHarmonicoD[3]);
+      $('.quinto').text(campoHarmonicoD[4]);
+      $('.sexto').text(campoHarmonicoD[5]);
+      $('.setimo').text(campoHarmonicoD[6]);
+  } else if (valueTom == '5') {
+      $(selectTom).val(4);
+      $('.tonica').text(campoHarmonicoEb[0]);
+      $('.segundo').text(campoHarmonicoEb[1]);
+      $('.quarto').text(campoHarmonicoEb[3]);
+      $('.quinto').text(campoHarmonicoEb[4]);
+      $('.sexto').text(campoHarmonicoEb[5]);
+      $('.setimo').text(campoHarmonicoEb[6]);
+  } else if (valueTom == '6') {
+      $(selectTom).val(5);
+      $('.tonica').text(campoHarmonicoE[0]);
+      $('.segundo').text(campoHarmonicoE[1]);
+      $('.quarto').text(campoHarmonicoE[3]);
+      $('.quinto').text(campoHarmonicoE[4]);
+      $('.sexto').text(campoHarmonicoE[5]);
+      $('.setimo').text(campoHarmonicoE[6]);
+  } else if (valueTom == '7') {
+      $(selectTom).val(6);
+      $('.tonica').text(campoHarmonicoF[0]);
+      $('.segundo').text(campoHarmonicoF[1]);
+      $('.quarto').text(campoHarmonicoF[3]);
+      $('.quinto').text(campoHarmonicoF[4]);
+      $('.sexto').text(campoHarmonicoF[5]);
+      $('.setimo').text(campoHarmonicoF[6]);
+  } else if (valueTom == '8') {
+      $(selectTom).val(7);
+      $('.tonica').text(campoHarmonicoFSust[0]);
+      $('.segundo').text(campoHarmonicoFSust[1]);
+      $('.quarto').text(campoHarmonicoFSust[3]);
+      $('.quinto').text(campoHarmonicoFSust[4]);
+      $('.sexto').text(campoHarmonicoFSust[5]);
+      $('.setimo').text(campoHarmonicoFSust[6]);
+  } else if (valueTom == '9') {
+      $(selectTom).val(8);
+      $('.tonica').text(campoHarmonicoG[0]);
+      $('.segundo').text(campoHarmonicoG[1]);
+      $('.quarto').text(campoHarmonicoG[3]);
+      $('.quinto').text(campoHarmonicoG[4]);
+      $('.sexto').text(campoHarmonicoG[5]);
+      $('.setimo').text(campoHarmonicoG[6]);
+  } else if (valueTom == '10') {
+      $(selectTom).val(9);
+      $('.tonica').text(campoHarmonicoAb[0]);
+      $('.segundo').text(campoHarmonicoAb[1]);
+      $('.quarto').text(campoHarmonicoAb[3]);
+      $('.quinto').text(campoHarmonicoAb[4]);
+      $('.sexto').text(campoHarmonicoAb[5]);
+      $('.setimo').text(campoHarmonicoAb[6]);
+  } else if (valueTom == '11') {
+      $(selectTom).val(10);
+      $('.tonica').text(campoHarmonicoA[0]);
+      $('.segundo').text(campoHarmonicoA[1]);
+      $('.quarto').text(campoHarmonicoA[3]);
+      $('.quinto').text(campoHarmonicoA[4]);
+      $('.sexto').text(campoHarmonicoA[5]);
+      $('.setimo').text(campoHarmonicoA[6]);
+  } else if (valueTom == '12') {
+      $(selectTom).val(11);
+      $('.tonica').text(campoHarmonicoBb[0]);
+      $('.segundo').text(campoHarmonicoBb[1]);
+      $('.quarto').text(campoHarmonicoBb[3]);
+      $('.quinto').text(campoHarmonicoBb[4]);
+      $('.sexto').text(campoHarmonicoBb[5]);
+      $('.setimo').text(campoHarmonicoBb[6]);
+  }
+})
+
+$(maisMeio).click(function() {
+    let valueTom = $(selectTom).val();
+  if (valueTom == '1') {
+      $(selectTom).val(2);
+      $('.tonica').text(campoHarmonicoCSust[0]);
+      $('.segundo').text(campoHarmonicoCSust[1]);
+      $('.quarto').text(campoHarmonicoCSust[3]);
+      $('.quinto').text(campoHarmonicoCSust[4]);
+      $('.sexto').text(campoHarmonicoCSust[5]);
+      $('.setimo').text(campoHarmonicoCSust[6]);
+  } else if (valueTom == '2') {
+      $(selectTom).val(3);
+      $('.tonica').text(campoHarmonicoD[0]);
+      $('.segundo').text(campoHarmonicoD[1]);
+      $('.quarto').text(campoHarmonicoD[3]);
+      $('.quinto').text(campoHarmonicoD[4]);
+      $('.sexto').text(campoHarmonicoD[5]);
+      $('.setimo').text(campoHarmonicoD[6]);
+  } else if (valueTom == '3') {
+      $(selectTom).val(4);
+      $('.tonica').text(campoHarmonicoEb[0]);
+      $('.segundo').text(campoHarmonicoEb[1]);
+      $('.quarto').text(campoHarmonicoEb[3]);
+      $('.quinto').text(campoHarmonicoEb[4]);
+      $('.sexto').text(campoHarmonicoEb[5]);
+      $('.setimo').text(campoHarmonicoEb[6]);
+  } else if (valueTom == '4') {
+      $(selectTom).val(5);
+      $('.tonica').text(campoHarmonicoE[0]);
+      $('.segundo').text(campoHarmonicoE[1]);
+      $('.quarto').text(campoHarmonicoE[3]);
+      $('.quinto').text(campoHarmonicoE[4]);
+      $('.sexto').text(campoHarmonicoE[5]);
+      $('.setimo').text(campoHarmonicoE[6]);
+  } else if (valueTom == '5') {
+      $(selectTom).val(6);
+      $('.tonica').text(campoHarmonicoF[0]);
+      $('.segundo').text(campoHarmonicoF[1]);
+      $('.quarto').text(campoHarmonicoF[3]);
+      $('.quinto').text(campoHarmonicoF[4]);
+      $('.sexto').text(campoHarmonicoF[5]);
+      $('.setimo').text(campoHarmonicoF[6]);
+  } else if (valueTom == '6') {
+      $(selectTom).val(7);
+      $('.tonica').text(campoHarmonicoFSust[0]);
+      $('.segundo').text(campoHarmonicoFSust[1]);
+      $('.quarto').text(campoHarmonicoFSust[3]);
+      $('.quinto').text(campoHarmonicoFSust[4]);
+      $('.sexto').text(campoHarmonicoFSust[5]);
+      $('.setimo').text(campoHarmonicoFSust[6]);
+  } else if (valueTom == '7') {
+      $(selectTom).val(8);
+      $('.tonica').text(campoHarmonicoG[0]);
+      $('.segundo').text(campoHarmonicoG[1]);
+      $('.quarto').text(campoHarmonicoG[3]);
+      $('.quinto').text(campoHarmonicoG[4]);
+      $('.sexto').text(campoHarmonicoG[5]);
+      $('.setimo').text(campoHarmonicoG[6]);
+  } else if (valueTom == '8') {
+      $(selectTom).val(9);
+      $('.tonica').text(campoHarmonicoAb[0]);
+      $('.segundo').text(campoHarmonicoAb[1]);
+      $('.quarto').text(campoHarmonicoAb[3]);
+      $('.quinto').text(campoHarmonicoAb[4]);
+      $('.sexto').text(campoHarmonicoAb[5]);
+      $('.setimo').text(campoHarmonicoAb[6]);
+  } else if (valueTom == '9') {
+      $(selectTom).val(10);
+      $('.tonica').text(campoHarmonicoA[0]);
+      $('.segundo').text(campoHarmonicoA[1]);
+      $('.quarto').text(campoHarmonicoA[3]);
+      $('.quinto').text(campoHarmonicoA[4]);
+      $('.sexto').text(campoHarmonicoA[5]);
+      $('.setimo').text(campoHarmonicoA[6]);
+  } else if (valueTom == '10') {
+      $(selectTom).val(11);
+      $('.tonica').text(campoHarmonicoBb[0]);
+      $('.segundo').text(campoHarmonicoBb[1]);
+      $('.quarto').text(campoHarmonicoBb[3]);
+      $('.quinto').text(campoHarmonicoBb[4]);
+      $('.sexto').text(campoHarmonicoBb[5]);
+      $('.setimo').text(campoHarmonicoBb[6]);
+  } else if (valueTom == '11') {
+      $(selectTom).val(12);
+      $('.tonica').text(campoHarmonicoB[0]);
+      $('.segundo').text(campoHarmonicoB[1]);
+      $('.quarto').text(campoHarmonicoB[3]);
+      $('.quinto').text(campoHarmonicoB[4]);
+      $('.sexto').text(campoHarmonicoB[5]);
+      $('.setimo').text(campoHarmonicoB[6]);
+  } else if (valueTom == '12') {
+      $(selectTom).val(1);
+      $('.tonica').text(campoHarmonicoC[0]);
+      $('.segundo').text(campoHarmonicoC[1]);
+      $('.quarto').text(campoHarmonicoC[3]);
+      $('.quinto').text(campoHarmonicoC[4]);
+      $('.sexto').text(campoHarmonicoC[5]);
+      $('.setimo').text(campoHarmonicoC[6]);
+  }
+})
+
+$(maisUm).click(function() {
+    let valueTom = $(selectTom).val();
+  if (valueTom == '1') {
+      $(selectTom).val(3);
+      $('.tonica').text(campoHarmonicoD[0]);
+      $('.segundo').text(campoHarmonicoD[1]);
+      $('.quarto').text(campoHarmonicoD[3]);
+      $('.quinto').text(campoHarmonicoD[4]);
+      $('.sexto').text(campoHarmonicoD[5]);
+      $('.setimo').text(campoHarmonicoD[6]);
+  } else if (valueTom == '2') {
+      $(selectTom).val(4);
+      $('.tonica').text(campoHarmonicoEb[0]);
+      $('.segundo').text(campoHarmonicoEb[1]);
+      $('.quarto').text(campoHarmonicoEb[3]);
+      $('.quinto').text(campoHarmonicoEb[4]);
+      $('.sexto').text(campoHarmonicoEb[5]);
+      $('.setimo').text(campoHarmonicoEb[6]);
+  } else if (valueTom == '3') {
+      $(selectTom).val(5);
+      $('.tonica').text(campoHarmonicoE[0]);
+      $('.segundo').text(campoHarmonicoE[1]);
+      $('.quarto').text(campoHarmonicoE[3]);
+      $('.quinto').text(campoHarmonicoE[4]);
+      $('.sexto').text(campoHarmonicoE[5]);
+      $('.setimo').text(campoHarmonicoE[6]);
+  } else if (valueTom == '4') {
+      $(selectTom).val(6);
+      $('.tonica').text(campoHarmonicoF[0]);
+      $('.segundo').text(campoHarmonicoF[1]);
+      $('.quarto').text(campoHarmonicoF[3]);
+      $('.quinto').text(campoHarmonicoF[4]);
+      $('.sexto').text(campoHarmonicoF[5]);
+      $('.setimo').text(campoHarmonicoF[6]);
+  } else if (valueTom == '5') {
+      $(selectTom).val(7);
+      $('.tonica').text(campoHarmonicoFSust[0]);
+      $('.segundo').text(campoHarmonicoFSust[1]);
+      $('.quarto').text(campoHarmonicoFSust[3]);
+      $('.quinto').text(campoHarmonicoFSust[4]);
+      $('.sexto').text(campoHarmonicoFSust[5]);
+      $('.setimo').text(campoHarmonicoFSust[6]);
+  } else if (valueTom == '6') {
+      $(selectTom).val(8);
+      $('.tonica').text(campoHarmonicoG[0]);
+      $('.segundo').text(campoHarmonicoG[1]);
+      $('.quarto').text(campoHarmonicoG[3]);
+      $('.quinto').text(campoHarmonicoG[4]);
+      $('.sexto').text(campoHarmonicoG[5]);
+      $('.setimo').text(campoHarmonicoG[6]);
+  } else if (valueTom == '7') {
+      $(selectTom).val(9);
+      $('.tonica').text(campoHarmonicoAb[0]);
+      $('.segundo').text(campoHarmonicoAb[1]);
+      $('.quarto').text(campoHarmonicoAb[3]);
+      $('.quinto').text(campoHarmonicoAb[4]);
+      $('.sexto').text(campoHarmonicoAb[5]);
+      $('.setimo').text(campoHarmonicoAb[6]);
+  } else if (valueTom == '8') {
+      $(selectTom).val(10);
+      $('.tonica').text(campoHarmonicoA[0]);
+      $('.segundo').text(campoHarmonicoA[1]);
+      $('.quarto').text(campoHarmonicoA[3]);
+      $('.quinto').text(campoHarmonicoA[4]);
+      $('.sexto').text(campoHarmonicoA[5]);
+      $('.setimo').text(campoHarmonicoA[6]);
+  } else if (valueTom == '9') {
+      $(selectTom).val(11);
+      $('.tonica').text(campoHarmonicoBb[0]);
+      $('.segundo').text(campoHarmonicoBb[1]);
+      $('.quarto').text(campoHarmonicoBb[3]);
+      $('.quinto').text(campoHarmonicoBb[4]);
+      $('.sexto').text(campoHarmonicoBb[5]);
+      $('.setimo').text(campoHarmonicoBb[6]);
+  } else if (valueTom == '10') {
+      $(selectTom).val(12);
+      $('.tonica').text(campoHarmonicoB[0]);
+      $('.segundo').text(campoHarmonicoB[1]);
+      $('.quarto').text(campoHarmonicoB[3]);
+      $('.quinto').text(campoHarmonicoB[4]);
+      $('.sexto').text(campoHarmonicoB[5]);
+      $('.setimo').text(campoHarmonicoB[6]);
+  } else if (valueTom == '11') {
+      $(selectTom).val(1);
+      $('.tonica').text(campoHarmonicoC[0]);
+      $('.segundo').text(campoHarmonicoC[1]);
+      $('.quarto').text(campoHarmonicoC[3]);
+      $('.quinto').text(campoHarmonicoC[4]);
+      $('.sexto').text(campoHarmonicoC[5]);
+      $('.setimo').text(campoHarmonicoC[6]);
+  } else if (valueTom == '12') {
+      $(selectTom).val(2);
+      $('.tonica').text(campoHarmonicoCSust[0]);
+      $('.segundo').text(campoHarmonicoCSust[1]);
+      $('.quarto').text(campoHarmonicoCSust[3]);
+      $('.quinto').text(campoHarmonicoCSust[4]);
+      $('.sexto').text(campoHarmonicoCSust[5]);
+      $('.setimo').text(campoHarmonicoCSust[6]);
+  }
+})
 
     $('#menu').click(function () {
         if (document.querySelector('nav').style.display == 'block') {
